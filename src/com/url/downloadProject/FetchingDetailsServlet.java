@@ -59,14 +59,14 @@ public class FetchingDetailsServlet extends HttpServlet {
 
 		response.setContentType("text/csv");
 		response.setHeader("Content-Disposition", "attachment; filename=\"weather.csv\"");
-
+		// adding data into .csv file
 		OutputStream outputStream = response.getOutputStream();
 		StringBuffer k1 = new StringBuffer(" Region,WeatherParam,Year,Month,Value");
 		k1.append("\n");
 		if (k != null && k.size() > 0) {
 			for (int j = 0; j < k.size(); j++) {
 				for (int j1 = 0; j1 < k.get(j).size(); j1++) {
-
+						
 					int count = 0;
 					for (; count < 17; count++) {
 						k1.append(k.get(j).get(j1).getCountry() == null ? "," + " " : k.get(j).get(j1).getCountry());

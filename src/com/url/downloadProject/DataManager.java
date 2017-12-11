@@ -63,7 +63,7 @@ public class DataManager {
 	                output.write(buffer, 0, n);
 	            }
 	            output.close();
-	           
+	           //To set data to .csv file
 	            int count = 0;
 	            ArrayList<ModelData> modelvenky = new ArrayList<ModelData>();
 	            BufferedReader r = new BufferedReader(new FileReader(file));
